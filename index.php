@@ -258,7 +258,7 @@
             </div>
             <div class="col-md-6">
                <div class="ser_img">
-                   <!-- <h1 class="display-4 font-bold"> Explore Our Class</h1>
+                  <!-- <h1 class="display-4 font-bold"> Explore Our Class</h1>
                    <h3 class="accented">Unlocking Vitality: Meipadam and Karlakattai</h3>
                 <p style='text-align:justify;'>
                    Discover the ancient fitness arts that resonate with both body and
@@ -467,7 +467,7 @@
                            <?php
                            if (empty($diff_bet['diff_img'])) {
                               ?>
-                             <img style="padding-top:80px;" src="images/gallery/14.jpg" alt="">
+                              <img style="padding-top:80px;" src="images/gallery/14.jpg" alt="">
 
                               <?php
                            } else {
@@ -479,7 +479,7 @@
                               <?php
                            }
                            ?>
-                           
+
                         </div>
                         <div class="col-lg-6 right-side difference_bet animated animate_on_scroll"
                            data-animate="fadeInRight">
