@@ -358,7 +358,8 @@
                </div>
             </div>
             <div class="row">
-               <div class="col-lg-3 col-sm-12 left-align animated animate_on_scroll  " data-animate="fadeInLeft">
+               <div class="col-lg-3 col-sm-12 left-align animated animate_on_scroll  " data-animate="fadeInLeft"
+                  id="left-side-properties">
                   <span class="properties">
                      <i> <img src="images/icons/pain.png" alt=""></i> Ease & Reduce Pain
                   </span>
@@ -374,11 +375,11 @@
 
                <div class="col-lg-6  center-align animated animate_on_scroll" data-animate="zoomIn">
 
-                  <img class='img-responsive' style="margin-left: 32px" src="images/benefit.png" alt="">
+                  <img class='img-responsive' style="margin-left: 32px" src="images/benefit.png" alt="" id="motoimg">
                </div>
 
 
-               <div class="col-lg-3 col-sm-12 right-align animated animate_on_scroll " data-animate="fadeInRight">
+               <div class="col-lg-3 col-sm-12 right-align animated animate_on_scroll " data-animate="fadeInRight" id="right-side-properties">
 
                   <span class="properties">
                      Increase Muscle Strength <i> <img src="images/icons/009-strong.png" alt=""></i>
@@ -793,10 +794,12 @@
    <!-- google map js -->
    <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
+
    <!-- end google map js -->
 </body>
-<script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
-</script>
+<script src="./animation.js"></script>
 
 </html>
