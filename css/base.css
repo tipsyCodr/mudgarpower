@@ -1,0 +1,37 @@
+:root {
+  --base-color: #f6f5f1;
+  --primary-color: #454345;
+  --secondary-color: white ;
+}
+
+body {
+  font-family: "Inter", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+body h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+body h3 {
+  padding-top: 30px;
+  font: 1.5rem sans-serif;
+  font-weight: 700;
+}
+body small {
+  font-size: 100%;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+body li {
+  font-size: 0.8rem;
+  list-style-type: circle;
+}
+body .logo img {
+  max-height: 100px;
+}
+
+body,
+.header {
+  background: var(--base-color);
+}/*# sourceMappingURL=base.css.map */

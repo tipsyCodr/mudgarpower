@@ -1,0 +1,186 @@
+@import 'mixins.scss';
+
+:root {
+    // --base-color: #d8c09d;
+    // --primary-color: #351e1e;
+    // --accent-color:#8c5a2b;
+
+
+    --base-color: #ffb140;
+    --accent-color:#bb250b;
+    --primary-color: #7c1a08;
+    
+    --secondary-color: white;
+    --dark-gradient: radial-gradient(circle, rgba(42,42,42,1) 0%, rgba(34,34,34,1) 30%, rgba(0,0,0,1) 78%, rgba(38,38,38,1) 100%);
+}
+
+// background: rgb(42,42,42);
+// background: 
+
+// ----font list
+// Oregano
+// Fondamento
+// Galada
+// Satisfy
+ .dark-gradient{
+     background:var()
+ }
+.revolve{
+    animation: revolve 2s linear infinite;
+}
+.expand-contract{
+    animation: expand-contract 1s linear infinite;
+    
+}
+.accented{
+    color: var(--accent-color);
+}
+.section{
+    margin: 200px 0;
+}
+.block{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    h2{
+       margin-left: 30%;
+        color: white;
+        margin-top: 10%;
+    }
+}
+.video-section{
+    padding: 200px 0;
+}
+.question-section{
+   
+    padding: 100px 0;
+}
+.sub-title{
+    font-size: 1.5rem;
+}
+.list-points li{
+    font-size:2rem;
+    color:black;
+}
+.strong-list {
+    color: black;
+    margin-top:20px;
+    margin-left: 20px;
+    li{
+        font-weight: 800;
+        font-size: 1rem;
+    }
+}
+$font-weights: (
+    thin: 100,
+    hairline: 100,
+    ultra-light: 200,
+
+    light: 300,
+    normal: 400,
+    medium: 500,
+    semi-bold: 600,
+    demibold: 600,
+    bold: 700,
+    extra-bold: 800,
+    ultra-bold: 800,
+    black: 900,
+    heavy: 900
+);
+
+@each $name, $weight in $font-weights {
+    .font-#{$name} {
+        font-weight: #{$weight};
+    }
+}
+
+body {
+    @include font;
+
+    h2 {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    h3 {
+        padding-top: 30px;
+        font: 1.5rem sans-serif;
+        font-weight: 700;
+    }
+
+    small {
+        font-size: 100%;
+        font-weight: 300;
+        text-transform: capitalize;
+    }
+
+    li {
+        font-size: .8rem;
+        list-style-type: square;
+    }
+
+    .logo {
+        img {
+            max-height: 100px;
+        }
+    }
+}
+
+.banner_main {
+background: var(--primary-color);
+}
+
+body{
+    // background: var(--base-color);
+}
+.header {
+    background: var(--base-color);
+
+}
+
+.about{
+    background: var(--primary-color);
+}
+
+.contact {
+    background: var(--base-color);
+}
+
+.video {
+    background: var(--secondary-color);
+}
+.footer {
+    background: var(--primary-color);
+}
+.copyright{
+    background-color: var(--primary-color);
+    border-top: 2px dashed var(--base-color);
+
+}
+.footer .container{
+    margin-bottom: -10px;
+}
+.footer .col-lg-4,
+.footer .col-lg-3,
+// .footer .col-lg-5
+{
+    border-left: 2px dashed;
+}
+@media only screen and (max-width: 768px) {
+.question-section{
+    .display-2{
+        margin: 10px 20px;
+
+        text-align: left;
+        font-size: 3rem;
+    }
+    .list-points li{
+        margin: 10px 20px;
+        // list-style: none;
+        // text-align: center;
+        font-size: 90%;
+    }
+}
+
+
+}
