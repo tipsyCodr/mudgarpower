@@ -51,7 +51,7 @@
    <link rel="stylesheet" href="css/custom.css">
 
 
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
 </head>
 <!-- body -->
 
@@ -378,7 +378,8 @@
                </div>
 
 
-               <div class="col-lg-3 col-sm-12 right-align animated animate_on_scroll " data-animate="fadeInRight" id="right-side-properties">
+               <div class="col-lg-3 col-sm-12 right-align animated animate_on_scroll " data-animate="fadeInRight"
+                  id="right-side-properties">
 
                   <span class="properties">
                      Increase Muscle Strength <i> <img src="images/icons/009-strong.png" alt=""></i>
