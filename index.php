@@ -28,7 +28,6 @@
    <link rel="stylesheet" href="css/style.css">
    <!-- Responsive-->
    <link rel="stylesheet" href="css/responsive.css">
-   <script src="https://cdn.jsdelivr.net/npm/ekko-lightbox@5.3.0/dist/ekko-lightbox.min.js"></script>
 
    <!-- fevicon -->
    <link rel="icon" href="images/fevicon.png" type="image/gif" />
@@ -747,6 +746,8 @@
    <!-- end footer -->
    <!-- Javascript files-->
    <script src="js/jquery.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/ekko-lightbox@5.3.0/dist/ekko-lightbox.min.js"></script>
+
    <script src="js/popper.min.js"></script>
    <script src="js/bootstrap.bundle.min.js"></script>
    <script src="js/jquery-3.0.0.min.js"></script>
