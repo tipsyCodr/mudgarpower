@@ -13,13 +13,21 @@
    <meta name="keywords" content="">
    <meta name="description" content="">
    <meta name="author" content="">
+   <!-- Favicon icon -->
+   <link rel="icon" sizes="16x16" href="./images/logo.png">
+   <link rel="icon" sizes="32x32" href="./images/logo.png">
+   <link rel="icon" sizes="48x48" href="../../images/logo.png">
+   <link rel="icon" sizes="64x64" href="../../images/logo.png">
+   <link rel="icon" sizes="96x96" href="../../images/logo.png">
+   <link rel="icon" sizes="128x128" href="../../images/logo.png">
+   <link rel="icon" sizes="192x192" href="../../images/logo.png">
+   <link rel="icon" sizes="256x256" href="../../images/logo.png">
    <!-- bootstrap css -->
    <link rel="stylesheet" href="css/bootstrap.min.css">
    <!-- style css -->
    <link rel="stylesheet" href="css/style.css">
    <!-- Responsive-->
    <link rel="stylesheet" href="css/responsive.css">
-   <script src="https://cdn.jsdelivr.net/npm/ekko-lightbox@5.3.0/dist/ekko-lightbox.min.js"></script>
 
    <!-- fevicon -->
    <link rel="icon" href="images/fevicon.png" type="image/gif" />
@@ -38,9 +46,6 @@
 
    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
 
-   <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
    <link rel="stylesheet" href="css/custom.css">
@@ -51,6 +56,7 @@
 <!-- body -->
 
 <body class="main-layout">
+
    <!-- loader  -->
    <div class="loader_bg">
       <div class="loader"><img src="images/inner.png" style="width:100px;" alt=""></div>
@@ -105,7 +111,7 @@
                   <ul class="email">
                      <li><a href="tel:+919475172334">Call: (+91) 9475172334</a></li>
                      <li><a href="#">Email: support@gmail.com</a></li>
-                     <!-- <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li> -->
+
                   </ul>
                </div>
             </div>
@@ -146,21 +152,41 @@
             <div class="swiper-wrapper">
                <!-- Slides -->
                <?php
+               require_once ('./root/db_connection.php');
                $titles = [
-                  'Transform Your Fitness Journey with Mudgar Exercise..',
-                  'Empower Your Body and Mind',
-                  'Experience the Ancient Wisdom of Mudgar'
+                  // 'Transform Your Fitness Journey with Mudgar Exercise..',
+                  // 'Empower Your Body and Mind',
+                  // 'Experience the Ancient Wisdom of Mudgar'
                ];
                $subs = [
-                  'Discover the Ancient Art of Strength and Wellness.',
-                  'Unlock Inner Strength Through Mudgar Practice.',
-                  'Timeless Techniques for Modern Living.'
+                  // 'Discover the Ancient Art of Strength and Wellness.',
+                  // 'Unlock Inner Strength Through Mudgar Practice.',
+                  // 'Timeless Techniques for Modern Living.'
                ];
                $imgs = [
-                  'images/gallery/10.jpg',
-                  'images/gallery/11.jpg',
-                  'images/gallery/12.jpg'
+                  // 'images/gallery/10.jpg',
+                  // 'images/gallery/11.jpg',
+                  // 'images/gallery/12.jpg'
                ];
+
+
+               $qry = $db->query("SELECT * FROM slide_information") or die('');
+               $qry2 = $db->query("SELECT * FROM explore_our_class") or die('');
+               $qry3 = $db->query("SELECT * FROM about_section_information") or die('');
+               $qry4 = $db->query('SELECT * FROM `differece_between_section_information`') or die('');
+
+               $exp_class = $qry2->fetch(PDO::FETCH_ASSOC);
+               $about_sec = $qry3->fetch(PDO::FETCH_ASSOC);
+               $diff_bet = $qry4->fetch(PDO::FETCH_ASSOC);
+
+
+               while ($row = $qry->fetch(PDO::FETCH_ASSOC)) {
+                  $titles[] = $row['slide_title'];
+                  $imgs[] = $row['slide_image'];
+                  $subs[] = $row['slide_subtitle'];
+               }
+
+
                $count = count($titles);
                foreach ($titles as $i => $title) {
                   ?>
@@ -168,7 +194,8 @@
                      <div class="container-fluid">
                         <div class="row">
                            <div class="col-lg-4 left-main fadeInUp">
-                              <img class=' img-responsive' src="<?php echo $imgs[$i]; ?>" alt="#"
+                              <img class=' img-responsive'
+                                 src="<?php echo "./admin/html/uploads/slider_images/" . $imgs[$i]; ?>" alt="#"
                                  style='border:10px solid #ddd;' />
                            </div>
                            <!-- <div class="col-lg-2 right-main  fadeInLeft"></div> -->
@@ -229,7 +256,7 @@
             </div>
             <div class="col-md-6">
                <div class="ser_img">
-                  <h1 class="display-4 font-bold"> Explore Our Class</h1>
+                  <!-- <h1 class="display-4 font-bold"> Explore Our Class</h1>
                   <h3 class="accented">Unlocking Vitality: Meipadam and Karlakattai</h3>
                   <p style='text-align:justify;'>
                      Discover the ancient fitness arts that resonate with both body and
@@ -300,10 +327,13 @@
                   </p>
                   <p>
                      Embrace these practices, unlock vitality, and discover a renewed zest for life. 🌟
-                  </p>
+                  </p> -->
+                  <?php echo $exp_class['description']; ?>
                   <div>
                      <h3>Our Next Classes Starts on:</h3>
-                     <p class="font-bold accented text-capitalize"> June 20, 2024 </p>
+                     <p class="font-bold accented text-capitalize">
+                        <?= date('M-d-Y', strtotime($exp_class['next_class'])); ?>
+                     </p>
                      <a class=" btn btn-danger my-2 active:color-red" href=" mailto:support@gmail?subject=I'm interested in your
                         program&cc=pathideamultiskill@gmail.com">Book
                         Now</a>
@@ -326,7 +356,8 @@
                </div>
             </div>
             <div class="row">
-               <div class="col-lg-3 col-sm-12 left-align animated animate_on_scroll  " data-animate="fadeInLeft">
+               <div class="col-lg-3 col-sm-12 left-align animated animate_on_scroll  " data-animate="fadeInLeft"
+                  id="left-side-properties">
                   <span class="properties">
                      <i> <img src="images/icons/pain.png" alt=""></i> Ease & Reduce Pain
                   </span>
@@ -342,11 +373,12 @@
 
                <div class="col-lg-6  center-align animated animate_on_scroll" data-animate="zoomIn">
 
-                  <img class='img-responsive' style="margin-left: 32px" src="images/benefit.png" alt="">
+                  <img class='img-responsive' style="margin-left: 32px" src="images/benefit.png" alt="" id="motoimg">
                </div>
 
 
-               <div class="col-lg-3 col-sm-12 right-align animated animate_on_scroll " data-animate="fadeInRight">
+               <div class="col-lg-3 col-sm-12 right-align animated animate_on_scroll " data-animate="fadeInRight"
+                  id="right-side-properties">
 
                   <span class="properties">
                      Increase Muscle Strength <i> <img src="images/icons/009-strong.png" alt=""></i>
@@ -371,14 +403,27 @@
             <div class="col-lg-6">
                <div class="row">
                   <div class="col-lg-12">
-                     <img class='img-responsive' src="images/gallery/1.jpg" alt="about">
+                     <?php
+                     if (empty($about_sec['about_img'])) {
+                        ?>
+                        <img class='img-responsive' src="images/gallery/1.jpg" alt="about">
+
+                        <?php
+                     } else {
+                        ?>
+                        <img class='img-responsive'
+                           src="<?php echo "./admin/html/uploads/about_images/" . $about_sec['about_img'] ?>" alt="about">
+
+                        <?php
+                     }
+                     ?>
+
                   </div>
                </div>
             </div>
             <div class="col-md-6">
                <div class="titlepage">
-                  <h1 style='color:white; text-transform:uppercase'> About Meipadam & Karlakattai</h1>
-
+                  <!-- <h1 style='color:white; text-transform:uppercase'> About Meipadam & Karlakattai</h1>
                   <h2>Why Karlakattai.</h2>
                   <br>
                   <ul class="text-white ">
@@ -400,7 +445,8 @@
                      <li><b>Unique Fitness Practice</b>: Distinguished from other fitness practices by its holistic
                         approach to
                         health and wellness.</li>
-                  </ul>
+                  </ul> -->
+                  <?php echo $about_sec['about_description']; ?>
                </div>
             </div>
          </div>
@@ -415,27 +461,41 @@
                <div class="col-md-12">
                   <div class="titlepage">
                      <div class="row">
+
                         <div class="col-lg-6 animated animate_on_scroll" data-animate="fadeInLeft">
-                           <img style="padding-top:80px;" src="images/gallery/14.jpg" alt="">
+
+                           <?php
+                           if (empty($diff_bet['diff_img'])) {
+                              ?>
+                              <img style="padding-top:80px;" src="images/gallery/14.jpg" alt="">
+
+                              <?php
+                           } else {
+                              ?>
+                              <img class='img-responsive'
+                                 src="<?php echo "./admin/html/uploads/difference_between_images/" . $diff_bet['diff_img'] ?>"
+                                 alt="about">
+
+                              <?php
+                           }
+                           ?>
+
                         </div>
                         <div class="col-lg-6 right-side difference_bet animated animate_on_scroll"
                            data-animate="fadeInRight">
-                           <h3 class="section-head">Difference Between</h3>
+                           <?php echo $diff_bet['diff_description']; ?>
+                           <!-- <h3 class="section-head">Difference Between</h3>
                            <small class="small-text">other fitness practice and Meipadam and Karlakattai</small>
                            <p>Discover the transformative power of Meipadam and Karlakattai, where fitness transcends
                               the ordinary. Here's what makes these practices unique:</p>
 
-                           <ol class="pt-2">
+                           <ol >
                               <li><b class="accented">360° Mobility Training</b>:
                                  <ul>
                                     <li>Meipadam introduces you to a full-circle approach to mobility.</li>
                                     <li>Explore movement in all directions, enhancing joint flexibility and range.</li>
                                  </ul>
                               </li>
-
-
-
-
                               <li><b class="accented">Dynamic Resistance Training:</b>:
                                  <ul>
                                     <li>Unlike conventional weight training, Karlakattai introduces dynamic resistance.
@@ -467,7 +527,7 @@
                                     <li>Achieve mental balance and clarity as you move.</li>
                                  </ul>
                               </li>
-                           </ol>
+                           </ol> -->
                         </div>
                      </div>
                   </div>
@@ -499,9 +559,21 @@
                   <div class="container">
                      <div class="carousel-caption ">
                         <div class="test_box">
-                           <i><img src="images/certificates/1.jpg" alt="#" style="width:300px" /></i>
+
+                           <?php
+                           $directory = "images/certificates";
+                           $images = glob($directory . "/*.jpg");
+
+                           foreach ($images as $key => $value) {
+                              ?>
+                              <i><img src="<?= $value ?>" alt="#" style="width:300px" /></i>
+                              <?php
+                           }
+                           ?>
+
+                           <!-- <i><img src="images/certificates/1.jpg" alt="#" style="width:300px" /></i>
                            <i><img src="images/certificates/2.jpg" alt="#" style="width:300px" /></i>
-                           <i><img src="images/gallery/2.jpg" alt="#" style="width:300px" /></i>
+                           <i><img src="images/gallery/2.jpg" alt="#" style="width:300px" /></i> -->
 
 
 
@@ -638,7 +710,8 @@
                                  style="padding-right:17px;" class="fa fa-instagram"></i></a></li>
 
                         <li><a href="https://youtube.com/@balbinderbabli4489?si=vT7gcCH9jR41ZQkn"><i
-                                 style="padding-right:17px;" class="fa fa-youtube"></i></a></li>
+                                 style="padding-right:17px;" class="fa fa-youtube"></i></a></li> <br />
+
                      </ul>
 
                   </div>
@@ -672,6 +745,8 @@
    <!-- end footer -->
    <!-- Javascript files-->
    <script src="js/jquery.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/ekko-lightbox@5.3.0/dist/ekko-lightbox.min.js"></script>
+
    <script src="js/popper.min.js"></script>
    <script src="js/bootstrap.bundle.min.js"></script>
    <script src="js/jquery-3.0.0.min.js"></script>
@@ -719,10 +794,12 @@
    <!-- google map js -->
    <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
+
    <!-- end google map js -->
 </body>
-<script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
-</script>
+<script src="./animation.js"></script>
 
 </html>
