@@ -538,87 +538,59 @@
       </div>
    </section>
 
-   <!-- customer -->
-   <div id="customer" class="customer ">
+   <!-- Customer Section -->
+   <div id="customer" class="customer">
       <div class="container">
          <div class="row">
             <div class="col-md-12">
                <div class="titlepage">
-                  <h2> <img src="images/head.png" alt="#" /> Certificates and Photos</h2>
+                  <h2><img src="images/head.png" alt="Section Icon" /> Certificates and Photos</h2>
                </div>
             </div>
          </div>
-         <div id="myCarousel" class="carousel slide customer_Carousel " data-merge='2' data-ride="carousel">
+
+         <!-- Carousel Section -->
+         <div id="myCarousel" class="carousel slide customer_Carousel" data-merge="2" data-ride="carousel">
+
+            <!-- Carousel Indicators -->
             <ol class="carousel-indicators">
-               <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-               <li data-target="#myCarousel" data-slide-to="1"></li>
-               <li data-target="#myCarousel" data-slide-to="2"></li>
-               <li data-target="#myCarousel" data-slide-to="3"></li>
+               <?php
+               // Get images from both directories
+               $directories = ["images/certificates", "images/gallery"];
+               $images = [];
+
+               foreach ($directories as $directory) {
+                  $images = array_merge($images, glob($directory . "/*.jpg"));
+               }
+
+               $images_per_slide = 3;
+               $total_slides = ceil(count($images) / $images_per_slide);
+
+               for ($i = 0; $i < $total_slides; $i++) {
+                  $activeClass = ($i === 0) ? 'active' : '';
+                  echo "<li data-target='#myCarousel' data-slide-to='$i' class='$activeClass'></li>";
+               }
+               ?>
             </ol>
+
+            <!-- Carousel Inner -->
             <div class="carousel-inner">
-               <div class="carousel-item active">
-                  <div class="container">
-                     <div class="carousel-caption ">
-                        <div class="test_box">
+               <?php
+               for ($i = 0; $i < $total_slides; $i++) {
+                  $isActive = ($i === 0) ? 'active' : '';
+                  echo "<div class='carousel-item $isActive'><div class='container'><div class='carousel-caption'><div class='test_box'>";
 
-                           <?php
-                           $directory = "images/certificates";
-                           $images = glob($directory . "/*.jpg");
+                  // Loop through a chunk of images for each slide
+                  for ($j = $i * $images_per_slide; $j < ($i + 1) * $images_per_slide && $j < count($images); $j++) {
+                     echo "<i><img src='{$images[$j]}' alt='Gallery Image' class='fixed-height-img img-fluid'></i>";
+                  }
 
-                           foreach ($images as $key => $value) {
-                              ?>
-                              <i><img src="<?= $value ?>" alt="#" style="width:300px" /></i>
-                              <?php
-                           }
-                           ?>
-
-                           <!-- <i><img src="images/certificates/1.jpg" alt="#" style="width:300px" /></i>
-                           <i><img src="images/certificates/2.jpg" alt="#" style="width:300px" /></i>
-                           <i><img src="images/gallery/2.jpg" alt="#" style="width:300px" /></i> -->
-
-
-
-
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="carousel-item">
-                  <div class="container">
-                     <div class="carousel-caption">
-                        <div class="test_box">
-
-                           <i><img src="images/gallery/6.jpg" alt="#" style="width:300px" /></i>
-                           <i><img src="images/gallery/7.jpg" alt="#" style="width:300px" /></i>
-                           <i><img src="images/gallery/8.jpg" alt="#" style="width:300px" /></i>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="carousel-item">
-                  <div class="container">
-                     <div class="carousel-caption">
-                        <div class="test_box">
-                           <i><img src="images/gallery/9.jpg" alt="#" style="width:300px" /></i>
-                           <i><img src="images/gallery/10.jpg" alt="#" style="width:300px" /></i>
-                           <i><img src="images/gallery/11.jpg" alt="#" style="width:300px" /></i>
-
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="carousel-item">
-                  <div class="container">
-                     <div class="carousel-caption">
-                        <div class="test_box">
-                           <i><img src="images/gallery/12.jpg" alt="#" style="width:300px" /></i>
-                           <i><img src="images/gallery/13.jpg" alt="#" style="width:300px" /></i>
-                           <i><img src="images/gallery/14.jpg" alt="#" style="width:300px" /></i>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+                  echo "</div></div></div></div>";
+               }
+               ?>
             </div>
+
+            <!-- Carousel Controls -->
             <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
                <i class="fa fa-chevron-left" aria-hidden="true"></i>
             </a>
@@ -628,7 +600,19 @@
          </div>
       </div>
    </div>
-   <!-- end customer -->
+   <!-- End Customer Section -->
+
+   <!-- CSS for Fixed Image Height -->
+   <style>
+      .fixed-height-img {
+         height: 340px;
+         /* Set your desired fixed height */
+         width: auto;
+         /* Maintains aspect ratio */
+         object-fit: cover;
+         /* Ensures image fills the area without distortion */
+      }
+   </style>
    </div>
 
    <!--  contact -->
