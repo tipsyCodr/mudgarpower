@@ -153,7 +153,7 @@
             <div class="swiper-wrapper">
                <!-- Slides -->
                <?php
-               require_once ('./root/db_connection.php');
+               require_once('./root/db_connection.php');
                $titles = [
                   // 'Transform Your Fitness Journey with Mudgar Exercise..',
                   // 'Empower Your Body and Mind',
@@ -329,7 +329,7 @@
                   <p>
                      Embrace these practices, unlock vitality, and discover a renewed zest for life. 🌟
                   </p> -->
-                  <?php echo $exp_class['description']; ?>
+                  <?php echo html_entity_decode($exp_class['description']); ?>
                   <div>
                      <h3>Our Next Classes Starts on:</h3>
                      <p class="font-bold accented text-capitalize">
@@ -378,7 +378,8 @@
                </div>
 
 
-               <div class="col-lg-3 col-sm-12 right-align animated animate_on_scroll " data-animate="fadeInRight" id="right-side-properties">
+               <div class="col-lg-3 col-sm-12 right-align animated animate_on_scroll " data-animate="fadeInRight"
+                  id="right-side-properties">
 
                   <span class="properties">
                      Increase Muscle Strength <i> <img src="images/icons/009-strong.png" alt=""></i>
