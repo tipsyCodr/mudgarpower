@@ -28,7 +28,8 @@ if (!$_COOKIE['login']) {
                     <form id="add_slider_form" method="post" enctype="multipart/form-data">
                         <div class="form-group mb-4">
                             <label for="image" class="form-label">Slider Image</label>
-                            <input type="file" class="form-control" name="image[]" id="image" accept="image/*" multiple>
+                            <input type="file" class="form-control" name="image[]" id="image" accept="image/*,video/*"
+                                multiple>
                         </div>
                         <div class="form-group mb-0">
                             <button type="submit" class="btn btn-primary btn-block">Add</button>

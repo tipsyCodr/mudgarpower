@@ -17,7 +17,7 @@
    <link rel="icon" sizes="16x16" href="./images/logo.png">
    <link rel="icon" sizes="32x32" href="./images/logo.png">
    <link rel="icon" sizes="48x48" href="../../images/logo.png">
-   <link rel="icon" sizes="64x64" href="../../images/logo.png">
+   <link rel="icon"   sizes="64x64" href="../../images/logo.png">
    <link rel="icon" sizes="96x96" href="../../images/logo.png">
    <link rel="icon" sizes="128x128" href="../../images/logo.png">
    <link rel="icon" sizes="192x192" href="../../images/logo.png">
@@ -110,7 +110,7 @@
                </div>
                <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5">
                   <ul class="email">
-                     <li><a href="tel:+919475172334">Call: (+91) 9475172334</a></li>
+                     <li><a href="tel:+917735193115">Call: (+91) 7735193115</a></li>
                      <li><a href="#">Email: support@gmail.com</a></li>
 
                   </ul>
@@ -126,7 +126,7 @@
    <!-- floating contact button -->
 
    <div class='bottom-right floating '>
-      <a href="https://wa.me/+919475172334" class='blink_me whatsapp btn custom-btn' target="_blank">
+      <a href="https://wa.me/+917735193115" class='blink_me whatsapp btn custom-btn' target="_blank">
          <i><img src="images/social-icons/wp.png" alt="Chat on whatsapp" width="30px"></i>
          Chat Now
       </a>
@@ -204,7 +204,7 @@
                               <h1 style='super-title'><?php echo $title; ?></h1>
                               <h2 style='font-weight:200'><?php echo $subs[$i]; ?></h2>
                               <div class="buttons">
-                                 <a class='whatsapp custom-btn' target="_blank" href="https://wa.me/+919475172334">
+                                 <a class='whatsapp custom-btn' target="_blank" href="https://wa.me/+917735193115">
                                     <i><img src="images/social-icons/wp.png" alt="Chat on whatsapp" width="30px"></i>
                                     Chat on Whatsapp
                                  </a>
@@ -555,16 +555,16 @@
             <!-- Carousel Indicators -->
             <ol class="carousel-indicators">
                <?php
-               // Get images from both directories
+               // Get images and videos from both directories
                $directories = ["images/certificates", "images/gallery"];
-               $images = [];
+               $media_files = [];
 
                foreach ($directories as $directory) {
-                  $images = array_merge($images, glob($directory . "/*.jpg"));
+                  $media_files = array_merge($media_files, glob($directory . "/*.{jpg,mp4}", GLOB_BRACE));
                }
 
-               $images_per_slide = 3;
-               $total_slides = ceil(count($images) / $images_per_slide);
+               $items_per_slide = 3; // Number of media items per slide
+               $total_slides = ceil(count($media_files) / $items_per_slide);
 
                for ($i = 0; $i < $total_slides; $i++) {
                   $activeClass = ($i === 0) ? 'active' : '';
@@ -580,9 +580,21 @@
                   $isActive = ($i === 0) ? 'active' : '';
                   echo "<div class='carousel-item $isActive'><div class='container'><div class='carousel-caption'><div class='test_box'>";
 
-                  // Loop through a chunk of images for each slide
-                  for ($j = $i * $images_per_slide; $j < ($i + 1) * $images_per_slide && $j < count($images); $j++) {
-                     echo "<i><img src='{$images[$j]}' alt='Gallery Image' class='fixed-height-img img-fluid'></i>";
+                  // Loop through a chunk of media files for each slide
+                  for ($j = $i * $items_per_slide; $j < ($i + 1) * $items_per_slide && $j < count($media_files); $j++) {
+                     $file = $media_files[$j];
+                     $file_extension = pathinfo($file, PATHINFO_EXTENSION);
+
+                     if (strtolower($file_extension) === 'mp4') {
+                        // Video rendering
+                        echo "<video class='fixed-height-media' controls>
+                              <source src='$file' type='video/mp4'>
+                              Your browser does not support the video tag.
+                           </video>";
+                     } else {
+                        // Image rendering
+                        echo "<img src='$file' alt='Gallery Image' class='fixed-height-media img-fluid'>";
+                     }
                   }
 
                   echo "</div></div></div></div>";
@@ -602,15 +614,14 @@
    </div>
    <!-- End Customer Section -->
 
-   <!-- CSS for Fixed Image Height -->
+   <!-- CSS for Fixed Media Height -->
    <style>
-      .fixed-height-img {
+      .fixed-height-media {
          height: 340px;
-         /* Set your desired fixed height */
+         /* Set a fixed height for both images and videos */
          width: auto;
-         /* Maintains aspect ratio */
          object-fit: cover;
-         /* Ensures image fills the area without distortion */
+         /* Ensures media fits without distortion */
       }
    </style>
    </div>
@@ -683,7 +694,7 @@
                   <div class="heading3">
                      <h3>Contact Us</h3>
                      <ul class="infometion">
-                        <li><a href="tel:+919475172334"><i class="fa fa-phone"></i> (+91) 9475172334</a></li>
+                        <li><a href="tel:+917735193115"><i class="fa fa-phone"></i> (+91) 7735193115</a></li>
 
                      </ul>
                   </div>

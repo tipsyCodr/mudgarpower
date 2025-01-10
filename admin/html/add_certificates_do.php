@@ -6,7 +6,13 @@ if (!empty($_FILES['image'])) {
     foreach ($_FILES['image']['name'] as $image_name) {
         $tmp_name = $_FILES['image']['tmp_name'][$count];
 
-        $save_to = '../../images/certificates/' . $image_name;
+        $extension = pathinfo($image_name, PATHINFO_EXTENSION);
+        if (in_array($extension, ['mp4', 'webm', 'ogg'])) {
+            $save_to = '../../images/certificates/' . $image_name;
+        } else {
+            $save_to = '../../images/certificates/' . $image_name;
+        }
+
         $upload_status = move_uploaded_file($tmp_name, $save_to);
 
         if ($upload_status) {
@@ -18,3 +24,4 @@ if (!empty($_FILES['image'])) {
         $count++;
     }
 }
+
