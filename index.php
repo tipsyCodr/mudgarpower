@@ -1,142 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-   <!-- basic -->
-   <meta charset="utf-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <!-- mobile metas -->
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-   <!-- site metas -->
-   <title>Mudgar Power</title>
-   <meta name="keywords" content="">
-   <meta name="description" content="">
-   <meta name="author" content="">
-   <!-- Favicon icon -->
-   <link rel="icon" sizes="16x16" href="./images/logo.png">
-   <link rel="icon" sizes="32x32" href="./images/logo.png">
-   <link rel="icon" sizes="48x48" href="../../images/logo.png">
-   <link rel="icon" sizes="64x64" href="../../images/logo.png">
-   <link rel="icon" sizes="96x96" href="../../images/logo.png">
-   <link rel="icon" sizes="128x128" href="../../images/logo.png">
-   <link rel="icon" sizes="192x192" href="../../images/logo.png">
-   <link rel="icon" sizes="256x256" href="../../images/logo.png">
-   <!-- bootstrap css -->
-   <link rel="stylesheet" href="css/bootstrap.min.css">
-   <!-- style css -->
-   <link rel="stylesheet" href="css/style.css">
-   <!-- Responsive-->
-   <link rel="stylesheet" href="css/responsive.css">
-
-   <!-- fevicon -->
-   <link rel="icon" href="images/fevicon.png" type="image/gif" />
-   <!-- Scrollbar Custom CSS -->
-   <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
-   <!-- Tweaks for older IEs-->
-   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
-      media="screen">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css"
-      integrity="sha512-ZKX+BvQihRJPA8CROKBhDNvoc2aDMOdAlcm7TUQY+35XYtrd3yh95QOOhsPDQY9QnKE0Wqag9y38OIgEvb88cA=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-
-   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
-
-
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-   <link rel="stylesheet" href="css/custom.css">
-
-
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-</head>
-<!-- body -->
-
-<body class="main-layout">
-
-   <!-- loader  -->
-   <div class="loader_bg">
-      <div class="loader"><img src="images/inner.png" style="width:100px;" alt=""></div>
-      <div class="loader expand-contract"><img src="images/outer.png"
-            style="width:180px;    width: 180px;margin-left: -10px;margin-top: -22px;" alt=""></div>
-   </div>
-   <!-- end loader -->
-
-   <!-- header -->
-   <header id="header">
-      <!-- header inner -->
-      <div class="header">
-         <div class="container">
-            <div class="row justify-content-between align-items-center">
-               <div class="col-xl-5 col-lg-5 col-md-9 col-sm-9">
-                  <nav class="navigation navbar navbar-expand-md navbar-dark ">
-                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04"
-                        aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                     </button>
-                     <div class="collapse navbar-collapse" id="navbarsExample04">
-                        <ul class="navbar-nav mr-auto">
-                           <li class="nav-item active">
-                              <a class="nav-link" href="#header"> Home </a>
-                           </li>
-                           <li class="nav-item">
-                              <a class="nav-link" href="#about">About</a>
-                           </li>
-                           <li class="nav-item">
-                              <a class="nav-link" href="#video">Videos</a>
-                           </li>
-                           <li class="nav-item">
-                              <a class="nav-link" href="#customer">Customer</a>
-                           </li>
-                           <li class="nav-item">
-                              <a class="nav-link" href="#contact">Contact Us</a>
-                           </li>
-                        </ul>
-                     </div>
-                  </nav>
-               </div>
-               <div class="col-xl-2 col-lg-2 col-md-3 col-sm-3 col logo_section">
-                  <div class="full">
-                     <div class="center-desk">
-                        <div class="logo">
-                           <a href="/"><img src="images/logo.png" alt="#" /></a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5">
-                  <ul class="email">
-                     <li><a href="tel:+919475172334">Call: (+91) 9475172334</a></li>
-                     <li><a href="#">Email: support@gmail.com</a></li>
-
-                  </ul>
-               </div>
-            </div>
-         </div>
-      </div>
-   </header>
-   <!-- end header inner -->
-   <!-- end header -->
-   <!-- banner -->
-
-   <!-- floating contact button -->
-
-   <div class='bottom-right floating '>
-      <a href="https://wa.me/+919475172334" class='blink_me whatsapp btn custom-btn' target="_blank">
-         <i><img src="images/social-icons/wp.png" alt="Chat on whatsapp" width="30px"></i>
-         Chat Now
-      </a>
-   </div>
-   <div class='bottom-center floating '>
-      <a href="mailto:support@gmail?subject=I'm interested in your program&cc=pathideamultiskill@gmail.com"
-         class='blink_me  book custom-btn' target="_blank">
-         Book Now
-      </a>
-   </div>
-   <!-- floating contact button -->
+<?php require_once('./partials/head.php'); ?>
 
    <!-- banner -->
    <section class="banner_main" style="">
@@ -152,7 +14,7 @@
             <div class="swiper-wrapper">
                <!-- Slides -->
                <?php
-               require_once ('./root/db_connection.php');
+               require_once('./root/db_connection.php');
                $titles = [
                   // 'Transform Your Fitness Journey with Mudgar Exercise..',
                   // 'Empower Your Body and Mind',
@@ -203,7 +65,7 @@
                               <h1 style='super-title'><?php echo $title; ?></h1>
                               <h2 style='font-weight:200'><?php echo $subs[$i]; ?></h2>
                               <div class="buttons">
-                                 <a class='whatsapp custom-btn' target="_blank" href="https://wa.me/+919475172334">
+                                 <a class='whatsapp custom-btn' target="_blank" href="https://wa.me/+917735193115">
                                     <i><img src="images/social-icons/wp.png" alt="Chat on whatsapp" width="30px"></i>
                                     Chat on Whatsapp
                                  </a>
@@ -257,9 +119,9 @@
             <div class="col-md-6">
                <div class="ser_img">
                   <!-- <h1 class="display-4 font-bold"> Explore Our Class</h1>
-                  <h3 class="accented">Unlocking Vitality: Meipadam and Karlakattai</h3>
-                  <p style='text-align:justify;'>
-                     Discover the ancient fitness arts that resonate with both body and
+                   <h3 class="accented">Unlocking Vitality: Meipadam and Karlakattai</h3>
+                <p style='text-align:justify;'>
+                   Discover the ancient fitness arts that resonate with both body and
                      mind: Meipadam and Karlakattai. These practices, when performed 108 times, create a profound impact
                      on your central nervous system. Why 108? It symbolizes the 108 nerve plexuses within your body, and
                      through these movements, you strengthen each one.</p>
@@ -267,9 +129,9 @@
                         body and
                         mind
                         crave.”</em>
-                  </h3>
+                  </h3> 
                   <h3 class="font-bold accented">Benefits:</h3>
-                  <ul>
+                   <ul>
                      <li>
                         <h4 class="font-bold ">Balanced Brain Activity:</h4>
                         <ol>
@@ -290,28 +152,28 @@
                            <li>Clear brain fog and reduce anxiety.</li>
                            <li>Promote better mental health.</li>
                         </ol>
-                     </li>
+                  </li>
                      <li>
                         <h4 class="font-bold ">Emotional Resilience:</h4>
                         <ol>
                            <li>Cultivate inner strength and stability.</li>
                            <li>Face life’s challenges with grace.</li>
                         </ol>
-                     </li>
+                  </li>
                      <li>
                         <h4 class="font-bold ">Holistic Massage:</h4>
                         <ol>
                            <li>Each repetition acts as a gentle massage for your organs.</li>
                            <li>Regulate their function and protect against diseases.</li>
                         </ol>
-                     </li>
-                     <li>
+                     </li> 
+                  <li>
                         <h4 class="font-bold ">Spiritual Connection:</h4>
                         <ol>
                            <li>Meipadam and Karlakattai foster faith and spirituality.</li>
                            <li>Connect with your inner self.</li>
                         </ol>
-                     </li>
+                  </li>
                      <li>
                         <h4 class="font-bold ">Unique Strength:</h4>
                         <ol>
@@ -328,7 +190,7 @@
                   <p>
                      Embrace these practices, unlock vitality, and discover a renewed zest for life. 🌟
                   </p> -->
-                  <?php echo $exp_class['description']; ?>
+                  <?php echo html_entity_decode($exp_class['description']); ?>
                   <div>
                      <h3>Our Next Classes Starts on:</h3>
                      <p class="font-bold accented text-capitalize">
@@ -537,86 +399,71 @@
       </div>
    </section>
 
-   <!-- customer -->
-   <div id="customer" class="customer ">
+   <!-- Customer Section -->
+   <div id="customer" class="customer">
       <div class="container">
          <div class="row">
             <div class="col-md-12">
                <div class="titlepage">
-                  <h2> <img src="images/head.png" alt="#" /> Certificates and Photos</h2>
+                  <h2><img src="images/head.png" alt="Section Icon" /> Certificates and Photos</h2>
                </div>
             </div>
          </div>
-         <div id="myCarousel" class="carousel slide customer_Carousel " data-merge='2' data-ride="carousel">
+
+         <!-- Carousel Section -->
+         <div id="myCarousel" class="carousel slide customer_Carousel" data-merge="2" data-ride="carousel">
+
+            <!-- Carousel Indicators -->
             <ol class="carousel-indicators">
-               <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-               <li data-target="#myCarousel" data-slide-to="1"></li>
-               <li data-target="#myCarousel" data-slide-to="2"></li>
-               <li data-target="#myCarousel" data-slide-to="3"></li>
+               <?php
+               // Get images and videos from both directories
+               $directories = ["images/certificates", "images/gallery"];
+               $media_files = [];
+
+               foreach ($directories as $directory) {
+                  $media_files = array_merge($media_files, glob($directory . "/*.{jpg,mp4}", GLOB_BRACE));
+               }
+
+               $items_per_slide = 3; // Number of media items per slide
+               $total_slides = ceil(count($media_files) / $items_per_slide);
+
+               for ($i = 0; $i < $total_slides; $i++) {
+                  $activeClass = ($i === 0) ? 'active' : '';
+                  echo "<li data-target='#myCarousel' data-slide-to='$i' class='$activeClass'></li>";
+               }
+               ?>
             </ol>
+
+            <!-- Carousel Inner -->
             <div class="carousel-inner">
-               <div class="carousel-item active">
-                  <div class="container">
-                     <div class="carousel-caption ">
-                        <div class="test_box">
+               <?php
+               for ($i = 0; $i < $total_slides; $i++) {
+                  $isActive = ($i === 0) ? 'active' : '';
+                  echo "<div class='carousel-item $isActive'><div class='container'><div class='carousel-caption'><div class='test_box'>";
 
-                           <?php
-                           $directory = "images/certificates";
-                           $images = glob($directory . "/*.jpg");
+                  // Loop through a chunk of media files for each slide
+                  for ($j = $i * $items_per_slide; $j < ($i + 1) * $items_per_slide && $j < count($media_files); $j++) {
+                     $file = $media_files[$j];
+                     $file_extension = pathinfo($file, PATHINFO_EXTENSION);
 
-                           foreach ($images as $key => $value) {
-                              ?>
-                              <i><img src="<?= $value ?>" alt="#" style="width:300px" /></i>
-                              <?php
-                           }
-                           ?>
+                     if (strtolower($file_extension) === 'mp4') {
+                        // Video rendering
+                        echo "<video class='fixed-height-media' controls>
+                              <source src='$file' type='video/mp4'>
+                              Your browser does not support the video tag.
+                           </video>";
+                     } else {
+                        // Image rendering
+                        echo "<img src='$file' alt='Gallery Image' class='fixed-height-media img-fluid'>";
+                     }
+                  }
 
-                           <!-- <i><img src="images/certificates/1.jpg" alt="#" style="width:300px" /></i>
-                           <i><img src="images/certificates/2.jpg" alt="#" style="width:300px" /></i>
-                           <i><img src="images/gallery/2.jpg" alt="#" style="width:300px" /></i> -->
-
-
-
-
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="carousel-item">
-                  <div class="container">
-                     <div class="carousel-caption">
-                        <div class="test_box">
-                           <i><img src="images/gallery/6.jpg" alt="#" style="width:300px" /></i>
-                           <i><img src="images/gallery/7.jpg" alt="#" style="width:300px" /></i>
-                           <i><img src="images/gallery/8.jpg" alt="#" style="width:300px" /></i>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="carousel-item">
-                  <div class="container">
-                     <div class="carousel-caption">
-                        <div class="test_box">
-                           <i><img src="images/gallery/9.jpg" alt="#" style="width:300px" /></i>
-                           <i><img src="images/gallery/10.jpg" alt="#" style="width:300px" /></i>
-                           <i><img src="images/gallery/11.jpg" alt="#" style="width:300px" /></i>
-
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="carousel-item">
-                  <div class="container">
-                     <div class="carousel-caption">
-                        <div class="test_box">
-                           <i><img src="images/gallery/12.jpg" alt="#" style="width:300px" /></i>
-                           <i><img src="images/gallery/13.jpg" alt="#" style="width:300px" /></i>
-                           <i><img src="images/gallery/14.jpg" alt="#" style="width:300px" /></i>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+                  echo "</div></div></div></div>";
+               }
+               ?>
             </div>
+
+            <!-- Carousel Controls -->
             <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
                <i class="fa fa-chevron-left" aria-hidden="true"></i>
             </a>
@@ -626,7 +473,18 @@
          </div>
       </div>
    </div>
-   <!-- end customer -->
+   <!-- End Customer Section -->
+
+   <!-- CSS for Fixed Media Height -->
+   <style>
+      .fixed-height-media {
+         height: 340px;
+         /* Set a fixed height for both images and videos */
+         width: auto;
+         object-fit: cover;
+         /* Ensures media fits without distortion */
+      }
+   </style>
    </div>
 
    <!--  contact -->
@@ -674,132 +532,4 @@
       </div>
    </div>
    <!-- end contact -->
-   <style>
-
-   </style>
-   <!--  footer -->
-   <footer id="contact">
-      <div class="footer">
-         <div class="container">
-            <div class="row">
-
-            </div>
-            <div class="row">
-               <div class="col-lg-4">
-                  <div class="heading3">
-                     <a href="#"><img src="images/logo_white.png" style='width:150px' alt="#" /></a>
-                     <p>Meipadam and Karlakattai is an ancient warrior fitness art which is 60000 years old and
-                        native to Tamilnadu.</p>
-                  </div>
-               </div>
-
-               <div class="col-lg-3 ">
-                  <div class="heading3">
-                     <h3>Contact Us</h3>
-                     <ul class="infometion">
-                        <li><a href="tel:+919475172334"><i class="fa fa-phone"></i> (+91) 9475172334</a></li>
-
-                     </ul>
-                  </div>
-                  <div class="heading3">
-                     <h3>Follow Us</h3>
-                     <ul style="list-style-type: none; display: flex; justify-content: left; padding: 0; margin: 0;">
-                        <li><a href="https://www.facebook.com/profile.php?id=100095122582196&mibextid=ZbWKwL"><i
-                                 style="padding-right:17px;" class="fa fa-facebook-f"></i></a></li>
-                        <li><a href="https://www.instagram.com/bablibalbinder?utm_source=qr&igsh=MmxxZDNpMG01Nm9s"><i
-                                 style="padding-right:17px;" class="fa fa-instagram"></i></a></li>
-
-                        <li><a href="https://youtube.com/@balbinderbabli4489?si=vT7gcCH9jR41ZQkn"><i
-                                 style="padding-right:17px;" class="fa fa-youtube"></i></a></li> <br />
-
-                     </ul>
-
-                  </div>
-               </div>
-               <div class="col-lg-5">
-                  <!-- <div class="col-lg-5 offset-lg-7"> -->
-                  <form class="bottom_form">
-                     <h3>Newsletter</h3>
-                     <input class="enter" placeholder="Enter your email" type="text" name="Enter your email">
-                     <button class="sub_btn">subscribe</button>
-                  </form>
-                  <!-- </div> -->
-               </div>
-            </div>
-         </div>
-         <div class=" copyright">
-
-            <div class="container">
-               <div class="row">
-                  <div class="col-md-12">
-                     <p>© 2024 All Rights Reserved. Designed By <u><a href="http://www.pathideamultiskill.com/">Path
-                              Idea
-                              Multiskills</a>
-                        </u></p>
-                  </div>
-               </div>
-            </div>
-         </div>
-
-   </footer>
-   <!-- end footer -->
-   <!-- Javascript files-->
-   <script src="js/jquery.min.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/ekko-lightbox@5.3.0/dist/ekko-lightbox.min.js"></script>
-
-   <script src="js/popper.min.js"></script>
-   <script src="js/bootstrap.bundle.min.js"></script>
-   <script src="js/jquery-3.0.0.min.js"></script>
-   <!-- sidebar -->
-   <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-   <script src="js/custom.js"></script>
-
-   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"
-      integrity="sha512-Ixzuzfxv1EqafeQlTCufWfaC6ful6WFqIz4G+dWvK0beHw0NVJwvCKSgafpy5gwNqKmgUfIBraVwkKI+Cz0SEQ=="
-      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-   <script>
-      $('a[href^="#"]').on('click', function (event) {
-
-         var target = $(this.getAttribute('href'));
-
-         if (target.length) {
-            event.preventDefault();
-            $('html, body').stop().animate({
-               scrollTop: target.offset().top
-            }, 2000);
-         }
-
-      });
-   </script>
-   <script>
-      // This example adds a marker to indicate the position of Bondi Beach in Sydney,
-      // Australia.
-      function initMap() {
-         var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 11,
-            center: { lat: 40.645037, lng: -73.880224 },
-         });
-
-         var image = 'images/maps-and-flags.png';
-         var beachMarker = new google.maps.Marker({
-            position: { lat: 40.645037, lng: -73.880224 },
-            map: map,
-            icon: image
-         });
-      }
-
-   </script>
-
-   <!-- google map js -->
-   <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
-
-   <!-- end google map js -->
-</body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-
-<script src="./animation.js"></script>
-
-</html>
+ <?php require_once('./partials/footer.php'); ?>
