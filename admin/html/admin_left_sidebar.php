@@ -27,9 +27,40 @@ if (!isset($_COOKIE['login'])) {
                             <a href="add_slider_manage.php" class="sidebar-link"><i
                                     class="mdi mdi-note-outline"></i><span class="hide-menu">Manage Sliders</span></a>
                         </li>
+                    </ul>
+                </li>
 
+                <!-- Blog Management -->
+                <li class="sidebar-item">
+                    <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
+                        aria-expanded="false"><i class="mdi mdi-blogger"></i><span class="hide-menu">Blog Management
+                        </span></a>
+                    <ul aria-expanded="false" class="collapse first-level">
+                        <li class="sidebar-item">
+                            <a href="blog_manage.php" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span
+                                    class="hide-menu">Manage Posts</span></a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="add_blog.php" class="sidebar-link"><i class="mdi mdi-plus-circle"></i><span
+                                    class="hide-menu">Add New Post</span></a>
+                        </li>
+                    </ul>
+                </li>
 
-
+                <!-- Video Gallery Management -->
+                <li class="sidebar-item">
+                    <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
+                        aria-expanded="false"><i class="mdi mdi-video"></i><span class="hide-menu">Video Gallery
+                        </span></a>
+                    <ul aria-expanded="false" class="collapse first-level">
+                        <li class="sidebar-item">
+                            <a href="video_manage.php" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span
+                                    class="hide-menu">Manage Videos</span></a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="add_video.php" class="sidebar-link"><i class="mdi mdi-plus-circle"></i><span
+                                    class="hide-menu">Add New Video</span></a>
+                        </li>
                     </ul>
                 </li>
 
@@ -43,10 +74,6 @@ if (!isset($_COOKIE['login'])) {
                             <a href="all_contact_records.php" class="sidebar-link"><i
                                     class="mdi mdi-email-outline"></i><span class="hide-menu">Contact Records</span></a>
                         </li>
-
-
-
-
                     </ul>
                 </li>
                 <!-- end contact record  -->
@@ -67,10 +94,6 @@ if (!isset($_COOKIE['login'])) {
                                     class="mdi mdi-email-outline"></i><span class="hide-menu"> Manage Certificates &
                                     Photos</span></a>
                         </li>
-
-
-
-
                     </ul>
                 </li>
                 <!-- certificate -->
@@ -85,10 +108,6 @@ if (!isset($_COOKIE['login'])) {
                                     class="mdi mdi-email-outline"></i><span class="hide-menu">Change Explore Class
                                     Content</span></a>
                         </li>
-
-
-
-
                     </ul>
                 </li>
                 <!-- explore class content  -->
@@ -103,10 +122,6 @@ if (!isset($_COOKIE['login'])) {
                                     class="mdi mdi-email-outline"></i><span class="hide-menu">Change About Contents
                                     Content</span></a>
                         </li>
-
-
-
-
                     </ul>
                 </li>
                 <!-- about content   -->
@@ -123,22 +138,31 @@ if (!isset($_COOKIE['login'])) {
                                     class="mdi mdi-email-outline"></i><span class="hide-menu">Change
                                     Content</span></a>
                         </li>
-
-
-
-
                     </ul>
                 </li>
                 <!-- diff between  -->
 
+                <!-- Course Management -->
+                <li class="sidebar-item">
+                    <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
+                        aria-expanded="false"><i class="mdi mdi-school"></i><span class="hide-menu">Course Management
+                        </span></a>
+                    <ul aria-expanded="false" class="collapse first-level">
+                        <li class="sidebar-item">
+                            <a href="course_manage.php" class="sidebar-link"><i class="mdi mdi-note-outline"></i><span
+                                    class="hide-menu">Manage Courses</span></a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="add_course.php" class="sidebar-link"><i class="mdi mdi-plus-circle"></i><span
+                                    class="hide-menu">Add New Course</span></a>
+                        </li>
+                    </ul>
+                </li>
+
                 <li class="sidebar-item">
                     <a href="../log-out.php" class="sidebar-link"><i class="mdi mdi-logout-outline"></i><span
                             class="hide-menu"><i class="mdi mdi-logout-variant"></i> Logout Content</span></a>
-
                 </li>
-
-
-
             </ul>
         </nav>
         <!-- End Sidebar navigation -->
