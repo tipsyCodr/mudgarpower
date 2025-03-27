@@ -1,4 +1,9 @@
-<?php 
+<?php
+$config = parse_ini_file('config.ini', true);
+$host = $config['database']['host'];
+$user = $config['database']['username'];
+$pass = $config['database']['password'];
+$dbname = $config['database']['dbname'];
 
-$db = new PDO('mysql:host=127.0.0.1;dbname=mudgarpower;charset=utf8mb4', 'root', ''); 
+$db = new PDO('mysql:host=' . $host . ';dbname=' . $dbname . ';charset=utf8mb4', $user, $pass);
 ?>
