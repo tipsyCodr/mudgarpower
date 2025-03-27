@@ -97,7 +97,7 @@
                               </a>
                               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                  <a class="dropdown-item" href="blog.php">Blog</a>
-                                 <a class="dropdown-item" href="course.php">Course</a>
+                                 <a class="dropdown-item" href="courses.php">Course</a>
                                  <a class="dropdown-item" href="video-gallery.php">Videos</a>
                               </div>
                            </li>
