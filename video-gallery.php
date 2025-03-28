@@ -1,5 +1,5 @@
 <?php
-include_once('partials/head.php'); 
+require_once('partials/head.php'); 
 require_once('root/db_connection.php');
 
 // Get all active videos
@@ -15,93 +15,96 @@ $categories = array_unique(array_column($videos, 'category'));
     .header{
         top: 0;
     }
-        .video-card {
-            margin-bottom: 30px;
-            transition: transform 0.3s ease;
-        }
-        .video-card:hover {
-            transform: translateY(-5px);
-        }
-        .video-thumbnail {
-            position: relative;
-            padding-top: 56.25%; /* 16:9 Aspect Ratio */
-            overflow: hidden;
-            background: #000;
-        }
-        .video-thumbnail img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .play-button {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 60px;
-            height: 60px;
-            background: rgba(0, 0, 0, 0.7);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-        .play-button:hover {
-            background: rgba(0, 0, 0, 0.9);
-        }
-        .play-button i {
-            color: white;
-            font-size: 24px;
-        }
-        .video-title {
-            font-size: 1.1rem;
-            margin: 10px 0;
-            font-weight: 600;
-        }
-        .video-description {
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 10px;
-        }
-        .video-category {
-            display: inline-block;
-            padding: 3px 8px;
-            background: #f0f0f0;
-            border-radius: 3px;
-            font-size: 0.8rem;
-            color: #666;
-        }
-        .modal-dialog {
-            max-width: 800px;
-        }
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-        }
-        .video-container iframe,
-        .video-container video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-        .category-filter {
-            margin-bottom: 30px;
-        }
-        .category-filter .btn {
-            margin-right: 10px;
-            margin-bottom: 10px;
-        }
-    </style>
+    .video-card {
+        margin-bottom: 30px;
+        transition: transform 0.3s ease;
+    }
+    .video-card:hover {
+        transform: translateY(-5px);
+    }
+    .video-thumbnail {
+        position: relative;
+        padding-top: 56.25%; /* 16:9 Aspect Ratio */
+        overflow: hidden;
+        background: #000;
+    }
+    .video-thumbnail img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .play-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60px;
+        height: 60px;
+        background: rgba(0, 0, 0, 0.7);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+    .play-button:hover {
+        background: rgba(0, 0, 0, 0.9);
+    }
+    .play-button i {
+        color: white;
+        font-size: 24px;
+    }
+    .video-title {
+        font-size: 1.1rem;
+        margin: 10px 0;
+        font-weight: 600;
+    }
+    .video-description {
+        color: #666;
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+    .video-category {
+        display: inline-block;
+        padding: 3px 8px;
+        background: #f0f0f0;
+        border-radius: 3px;
+        font-size: 0.8rem;
+        color: #666;
+    }
+    .modal-dialog {
+        max-width: 800px;
+    }
+    .video-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+    }
+    .video-container iframe,
+    .video-container video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .category-filter {
+        margin-bottom: 30px;
+    }
+    .category-filter .btn {
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+</style>
 
+</head>
+<body>
+    <?php include_once('header.php'); ?>
 
     <div class="container mt-5" style="padding-top: 100px;">
         <h1 class="mb-4">Video Gallery</h1>
@@ -163,6 +166,7 @@ $categories = array_unique(array_column($videos, 'category'));
         </div>
     </div>
 
+    <?php include_once('partials/footer.php'); ?>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
@@ -222,4 +226,5 @@ $categories = array_unique(array_column($videos, 'category'));
             });
         });
     </script>
-<?php include_once('partials/footer.php'); ?> 
+</body>
+</html> 

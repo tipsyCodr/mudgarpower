@@ -46,7 +46,7 @@ if (!isset($_COOKIE['login'])) {
   <!-- tiny text editor cdn  -->
   <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 
-
+<link rel="stylesheet" href="../dist/css/custom.css">
 
 </head>
 
